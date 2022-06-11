@@ -50,7 +50,7 @@ public class ParkingSpotController {
     }
 
     @GetMapping("/{id}")
-    public  ResponseEntity<Object> getOneParkingSpot(@PathVariable(value = "id") /*long*/UUID id)
+    public  ResponseEntity<Object> getOneParkingSpot(@PathVariable(value = "id") long /*UUID*/ id)
     {
         Optional<ParkingSpotModel> parkingSpotModelOptional = parkingSpotService.findById(id);
         if(!parkingSpotModelOptional.isPresent()){
@@ -59,7 +59,7 @@ public class ParkingSpotController {
     }
 
     @DeleteMapping("/{id}")
-    public  ResponseEntity<Object> deleteOneParkingSpot(@PathVariable(value = "id") /*long*/UUID id)
+    public  ResponseEntity<Object> deleteOneParkingSpot(@PathVariable(value = "id") long /*UUID*/ id)
     {
         Optional<ParkingSpotModel> parkingSpotModelOptional = parkingSpotService.findById(id);
         if(!parkingSpotModelOptional.isPresent()){
@@ -69,7 +69,7 @@ public class ParkingSpotController {
     }
 
     @PutMapping("/{id}")
-    public  ResponseEntity<Object> deleteOneParkingSpot(@PathVariable(value = "id") /*long*/UUID id, @RequestBody @Valid ParkingSpotDto parkingSpotDto)
+    public  ResponseEntity<Object> deleteOneParkingSpot(@PathVariable(value = "id") long/*UUID*/ id, @RequestBody @Valid ParkingSpotDto parkingSpotDto)
     {
         Optional<ParkingSpotModel> parkingSpotModelOptional = parkingSpotService.findById(id);
         if(!parkingSpotModelOptional.isPresent()){

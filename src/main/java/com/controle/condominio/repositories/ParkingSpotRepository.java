@@ -7,9 +7,9 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 import java.util.UUID;
 @Repository
-public interface ParkingSpotRepository extends JpaRepository<ParkingSpotModel, UUID> {
+public interface ParkingSpotRepository extends JpaRepository<ParkingSpotModel, Long/*UUID*/> {
 
-    Optional<ParkingSpotModel> findById(/*long*/UUID id);
+    Optional<ParkingSpotModel> findById(long/*UUID*/ id);
     boolean existsByLicensePlateCar(String licensePlateCar);
 
     boolean existsByParkingSpotNumber(String ParkingSpotNumber);
