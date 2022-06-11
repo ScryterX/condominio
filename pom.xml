@@ -14,7 +14,7 @@
 	<name>condominio</name>
 	<description>Esta API tem como objetivo permitir ao usuário o gerenciamento de controle de condomínio</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
