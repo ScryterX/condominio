@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Gerenciamento</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h1 style="cursor: pointer" class="titulo">Gerenciamento de Condomínio</h1>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>Moradores</h2>
+				<label for="filtrar-tabela">Filtre:</label>
+				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do inquilino">
+				<table>
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Bloco</th>
+							<th>Número AP</th>
+							<th>Vaga de estacionamento</th>
+							<th>Veículo</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-pacientes">
+						<tr class="paciente" id="primeiroPaciente">
+							<td class="info-nome">Paulo</td>
+							<td class="info-bloco">1</td>
+							<td class="info-ap">112</td>
+							<td class="info-vaga">12</td>
+							<td class="info-veiculo">Toyota Supra MK4</td>
+						</tr>
+
+						<tr class="paciente" >
+							<td class="info-nome">João</td>
+							<td class="info-bloco">1</td>
+							<td class="info-ap">113</td>
+							<td class="info-vaga">13</td>
+							<td class="info-veiculo">Nissan Silvia</td>
+						</tr>
+
+						<tr class="paciente" >
+							<td class="info-nome">Erica</td>
+							<td class="info-bloco">1</td>
+							<td class="info-ap">114</td>
+							<td class="info-vaga">14</td>
+							<td class="info-veiculo">Nissan GTR R34</td>
+						</tr>
+
+						<tr class="paciente">
+							<td class="info-nome">Douglas</td>
+							<td class="info-bloco">2</td>
+							<td class="info-ap">121</td>
+							<td class="info-vaga">21</td>
+							<td class="info-veiculo">BMW M5</td>
+						</tr>
+						<tr class="paciente" >
+							<td class="info-nome">Tatiana</td>
+							<td class="info-bloco">2</td>
+							<td class="info-ap">125</td>
+							<td class="info-vaga">25</td>
+							<td class="info-veiculo">Ford Focus</td>
+						</tr>
+					</tbody>
+				</table>
+				<span id="erro-ajax" class="invisivel">Erro ao buscar inquilino</span>
+				<button id="buscar-pacientes" class="botao bto-principal">Buscar</button>
+			</section>
+		</main>
+		<section class="container">
+		    <h2 id="titulo-form">Adicionar novo inquilino</h2>
+		    <ul id="mensagens-erro">
+		    	<li></li>
+				<li></li>
+				<li></li>
+		    </ul>
+		    <form id="form-adiciona">
+		        <div class="grupo">
+		            <label for="nome">Nome:</label>
+		            <input id="nome" name="nome" type="text" placeholder="digite o nome do inquilino" class="campo">
+		        </div>
+		        <div class="grupo">
+		            <label for="peso">Bloco:</label>
+		            <input id="peso" name="peso" type="text" placeholder="digite o número do Bloco" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="altura">Número AP:</label>
+		            <input id="altura" name="altura" type="text" placeholder="digite o número do apartamento" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="gordura">Vaga:</label>
+		            <input id="gordura" type="text" placeholder="digite o número da Vaga" class="campo campo-medio">
+		        </div>
+				<div class="grupo">
+		            <label for="imc">Veículo:</label>
+		            <input id="imc" type="text" placeholder="digite o nome do Veículo" class="campo campo-medio">
+		        </div>
+
+		        <button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
+		    </form>
+		</section>
+		<script type="text/javascript" src="js/calcula-imc.js"></script>
+		<script type="text/javascript" src="js/form.js"></script>
+		<script type="text/javascript" src="js/remover-paciente.js"></script>
+		<script type="text/javascript" src="js/filtra.js"></script>
+		<script type="text/javascript" src="js/buscar-pacientes.js"></script>
+	</body>
+</html>
